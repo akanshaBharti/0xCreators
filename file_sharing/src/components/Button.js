@@ -16,10 +16,10 @@ const Button = () => {
       try {
         await window.ethereum.send('eth_requestAccounts');
         console.log('MetaMask is enabled');
-        alert('Metamask wallet connected');
+        alert('Metamask wallet already connected');
       } catch (error) {
         console.error('Error enabling MetaMask:', error);
-        alert('Go to your metamask extension and accept the request to connect.');
+        alert('Go to your metamask and accept the request to connect the wallet');
       } finally {
         setIsRequestPending(false);
       }
