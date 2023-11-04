@@ -1,4 +1,4 @@
-button {
+.custom-file-input {
     width: 120px;
     height: 40px;
     border: 3px solid #315cfd;
@@ -9,13 +9,21 @@ button {
     font-size: 1em;
     font-weight: 550;
     font-family: 'Montserrat', sans-serif;
+    color: #3498db;
   }
   
-  button:hover {
+  .custom-file-input:hover {
     background: #315cfd;
     color: white;
     font-size: 1.2em;
   }
+  
+  .custom-file-input:disabled {
+    background: #ddd; /* Change background color when disabled */
+    border: 3px solid #ddd; /* Change border color when disabled */
+    cursor: not-allowed; /* Change cursor when disabled */
+  }
+  
 
   .dialog {
     border: 2px solid #315cfd; /* White border */
@@ -40,5 +48,65 @@ button {
     right: 10px;
     font-size: 20px;
     cursor: pointer;
+  }
+  /* Define a class for the custom button */
+.custom-button {
+    background-color: #3498db; /* Background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove the default border */
+    padding: 10px 20px; /* Adjust padding for size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+  }
+  
+  /* Style the button when hovered over */
+  .custom-button:hover {
+    background-color: #2980b9;
+  }
+  
+ 
+/* Style the container div */
+div.className {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Style the form */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Style the label and input */
+  label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  /* Style the text area */
+  .textArea {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the button */
+  button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Disable the button when the input is disabled */
+  input:disabled + .textArea + button {
+    background-color: #ccc;
+    cursor: not-allowed;
   }
   
