@@ -1,14 +1,9 @@
-
-import { dividerClasses } from '@mui/material';
 import './App.css';
+import Loader from './components/Loader.js';
 
 function App() {
   return (
-    <div className='text-xl text-black'>
-      <p >File Sharing </p>
-    </div>
-    
-    
+   <Loader/>    
   );
 }
 
