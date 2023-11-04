@@ -24,7 +24,7 @@ const Button = () => {
         setIsRequestPending(false);
       }
     } else {
-      console.error('MetaMask extension not found');
+      console.log('MetaMask extension not found');
       setIsRequestPending(false);
     }
   };

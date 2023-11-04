@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 // import { addOperation } from "../utils/operation";
 import axios from "axios";
+import './Css/addFile.css';
 
-const FileUpload: React.FC = () => {
+const FileUpload= ({ contract, account, provider }) => {
     const [loading, setLoading] = useState<boolean>(false);
     const [file, setFile] = useState<Uint8Array | null>(null);
     const [fileName, setFileName] = useState<string | null>(null);
@@ -34,6 +35,10 @@ const FileUpload: React.FC = () => {
 
           const DataHash = `https://gateway.pinata.cloud/ipfs/${resFile.data.IpfsHash}`;
           console.log(DataHash)
+          contract.add(account,DataHash);
+        alert("Successfully Image Uploaded");
+        setFileName("No image selected");
+        setFile(null); 
           // await addOperation(DataHash);
         } catch (error) {
           alert(error);
@@ -63,7 +68,7 @@ const FileUpload: React.FC = () => {
             setFile(fileData);
             setFileName(data.name);
     
-            console.log('File data as ArrayBuffer:', fileData.slice(0, 10));
+            // console.log('File data as ArrayBuffer:', fileData.slice(0, 10));
             console.log('File name:', data.name);
     
           }
@@ -81,12 +86,15 @@ const FileUpload: React.FC = () => {
         <div className="d-flex flex-column justify-content-center align-items-center h-100">
 
             <form>
-                <label htmlFor="file-upload">
-                   Upload
+              <button>
+              <label htmlFor="file-upload">
+                   Upload File
                 </label>
-                <input type="file" id="file-upload" name="data" onChange={retrieveFile} >
+              </button>
+                
+                <input type="file" id="file-upload" name="data" onChange={retrieveFile} disabled={!account}> 
                 </input>
-
+                {/* <span className="textArea">Image: {fileName}</span> */}
             <button type="submit"  className="btn btn-primary btn-lg" onClick={onAddUser}>
               Add File
             </button>
