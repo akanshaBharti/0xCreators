@@ -9,11 +9,15 @@ body {
   /* Use the custom font */
 }
 
-
 .text {
   font-size: 40px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.8); /* Increase transparency (adjust the alpha value as needed) */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Increase transparency (adjust the alpha value as needed) */
   animation: fadeIn 2s ease-in-out; /* Add animation */
   /* Add any other text styles you want */
 }

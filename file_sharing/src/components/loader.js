@@ -4,7 +4,7 @@ const Loader = () => {
   return (
     <div>
       <div className="text">
-        <p>Welcome to File Sharing Plateform</p>
+        <p>Welcome to Drive 3.0</p>
       </div>
       <div className="box-of-star1">
         <div className="star star-position1"></div>

@@ -8,12 +8,27 @@ import { useState, useEffect } from "react";
 import Loader from './components/Loader.js';
 import FileUpload from './components/addFile.tsx';
 import Wallet from "./components/Wallet.js"
+// import Wallet from "./components/Wallet";
+// import Loader from "./components/Loader";
+
 
 
 function App() {
   const [account, setAccount] = useState("");
   const [contract, setContract] = useState(null);
   const [provider, setProvider] = useState(null);
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading for 2 seconds and then switch to the Wallet component
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    // Clear the timeout if the component unmounts
+    return () => clearTimeout(timeout);
+  }, []);
 
   useEffect(() => { 
     const provider = new ethers.BrowserProvider(window.ethereum)
@@ -50,12 +65,12 @@ function App() {
 
   return (
     <div>
-
-    <FileUpload account={account}
+   {loading ? <Loader /> : <Wallet />}
+   <FileUpload account={account}
           provider={provider}
           contract={contract}/>
     </div>    
   );
-}
+};
 
 export default App;
