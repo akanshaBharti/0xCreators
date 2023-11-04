@@ -6,6 +6,9 @@ import { useState, useEffect } from "react";
 import Loader from './components/loader.js';
 import AddFile from './components/addFile.js';
 
+import Button from './components/Button'
+import Heading from './components/Heading';
+
 function App() {
   const [account, setAccount] = useState("");
   const [contract, setContract] = useState(null);
@@ -51,15 +54,27 @@ function App() {
   
 
   return (
+    <>
+   
     <div className='App'>
-      <Loader/>
+      {/* <Loader/>
       <ConnectWallet/>
       <p style={{ color: "white" }}>
           Account : {account ? account : "Not connected"}
         </p> 
-        {/* <AddFile/> */}
-    </div>
     
+    
+    <div className='flex flex-col items-center justify-center h-screen bg-black border-dotted border-2 border-color: rgb(229 231 235) '>
+      <div className=' pb-28'>
+      <Heading/>
+      </div>
+    <div className=' pb-40'>
+      <Button/>
+    </div>
+    </div>  */}
+    <AddFile/>
+    </div>
+    </> 
   );
 }
 
