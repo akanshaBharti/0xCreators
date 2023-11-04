@@ -1,12 +1,14 @@
-import React from "react";
-import Loader from "./components/Loader"
-import "./App.css";
+
+import { dividerClasses } from '@mui/material';
+import './App.css';
 
 function App() {
   return (
-    <div>
-      <Loader/>
+    <div className='text-xl text-black'>
+      <p >File Sharing </p>
     </div>
+    
+    
   );
 }
 
