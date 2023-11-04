@@ -4,6 +4,7 @@ import Drive from './contracts/Drive.sol/Drive.json'
 import { ethers } from "ethers";
 import { useState, useEffect } from "react";
 import Loader from './components/loader.js';
+import AddFile from './components/addFile.js';
 
 function App() {
   const [account, setAccount] = useState("");
@@ -56,6 +57,7 @@ function App() {
       <p style={{ color: "white" }}>
           Account : {account ? account : "Not connected"}
         </p> 
+        {/* <AddFile/> */}
     </div>
     
   );
