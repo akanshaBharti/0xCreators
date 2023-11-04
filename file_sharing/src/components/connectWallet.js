@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ConnectWallet = () =>{
+const ConnectWallet = ({ connectWallet }) =>{
     return(
        <>
-       <button className='bg-blue-500 mt-2'>
+       <button className='bg-blue-500 mt-2' onClick={connectWallet}>
       Connect Wallet
     </button>
        </>
