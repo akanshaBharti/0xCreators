@@ -1,9 +1,12 @@
-import './App.css';
-import Loader from './components/Loader.js';
+import React from "react";
+import Loader from "./components/Loader"
+import "./App.css";
 
 function App() {
   return (
-   <Loader/>    
+    <div>
+      <Loader/>
+    </div>
   );
 }
 
