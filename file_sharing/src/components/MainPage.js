@@ -51,7 +51,7 @@ function MainPage(){
     }, []);
     return(
       <>
-      <div>
+      <div className="w-screen px-4">
           <Navbar account={account} />
           {!modalOpen && (
         <button className="share" onClick={() => setModalOpen(true)}>
