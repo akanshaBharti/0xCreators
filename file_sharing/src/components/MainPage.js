@@ -4,13 +4,17 @@ import Drive from '../contracts/Drive.sol/Drive.json'
 import { ethers } from "ethers";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import FileUpload from "./addFile.tsx";
+import Modal from "./Modal.js";
+import Display from "./display.js";
 
 function MainPage(){
 
     const [account, setAccount] = useState("");
     const [contract, setContract] = useState(null);
     const [provider, setProvider] = useState(null);
-  
+    const [modalOpen, setModalOpen] = useState(false);
+
   
   
     useEffect(() => { 
@@ -46,9 +50,26 @@ function MainPage(){
       provider && loadProvider();
     }, []);
     return(
-        <div className="w-screen">
-          <Navbar account={account} />    
+      <>
+      <div>
+          <Navbar account={account} />
+          {!modalOpen && (
+        <button className="share" onClick={() => setModalOpen(true)}>
+          Share
+        </button>
+      )}
+      {modalOpen && (
+        <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
+      )}
+          <FileUpload
+          account={account}
+          provider={provider}
+          contract={contract}
+        ></FileUpload>
+         <Display  contract={contract} account={account}></Display>
         </div>
+      </>
+        
     )
 }
 export default MainPage

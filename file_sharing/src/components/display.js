@@ -45,7 +45,7 @@ const Display = ({ contract, account }) => {
         placeholder="Enter Address"
         className="address"
       ></input>
-      <button className="center button" onClick={getdata}>
+      <button className="center button_1" onClick={getdata}>
         Get Data
       </button>
     </>
