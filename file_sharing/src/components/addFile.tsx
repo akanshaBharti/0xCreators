@@ -79,7 +79,7 @@ const FileUpload = ({ contract, account, provider }) => {
     
     <div className="">
       <form>
-        <label htmlFor="file-upload">Upload File</label>
+        {/* <label htmlFor="file-upload">Upload File</label> */}
         <input
           type="file"
           id="file-upload"

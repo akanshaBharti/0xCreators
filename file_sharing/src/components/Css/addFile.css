@@ -1,23 +1,6 @@
 .custom-file-input {
-    width: 120px;
-    height: 40px;
-    border: 3px solid #315cfd;
-    border-radius: 45px;
-    transition: all 0.3s;
-    cursor: pointer;
-    background: white;
-    font-size: 1em;
-    font-weight: 550;
-    font-family: 'Montserrat', sans-serif;
-    color: #3498db;
-  }
-  
-  .custom-file-input:hover {
-    background: #315cfd;
-    color: white;
-    font-size: 1.2em;
-  }
-  
+    margin-left: 190px;
+  }                            
   .custom-file-input:disabled {
     background: #ddd; /* Change background color when disabled */
     border: 3px solid #ddd; /* Change border color when disabled */
@@ -50,19 +33,7 @@
     cursor: pointer;
   }
   /* Define a class for the custom button */
-.custom-button {
-    background-color: #3498db; /* Background color */
-    color: #fff; /* Text color */
-    border: none; /* Remove the default border */
-    padding: 10px 20px; /* Adjust padding for size */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Show pointer cursor on hover */
-  }
-  
-  /* Style the button when hovered over */
-  .custom-button:hover {
-    background-color: #2980b9;
-  }
+
   
  
 /* Style the container div */
