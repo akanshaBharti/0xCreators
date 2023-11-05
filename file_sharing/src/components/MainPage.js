@@ -46,9 +46,8 @@ function MainPage(){
       provider && loadProvider();
     }, []);
     return(
-        <div>
-          <Navbar account={account} />
-    
+        <div className="w-screen">
+          <Navbar account={account} />    
         </div>
     )
 }
