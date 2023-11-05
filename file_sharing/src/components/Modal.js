@@ -8,7 +8,7 @@ const Modal = ({ setModalOpen, contract }) => {
   };
   useEffect(() => {
     const accessList = async () => {
-      const addressList = await contract.shareAccess();
+      const addressList = await contract.giveAccess();
       let select = document.querySelector("#selectNumber");
       const options = addressList;
 

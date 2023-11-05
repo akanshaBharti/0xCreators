@@ -1,6 +1,6 @@
 import React from "react";
 import ConnectWallet from '../components/connectWallet';
-import Drive from '../contracts/Drive.sol/Drive.json'
+import abi from '../contracts/Drive.json'
 import { ethers } from "ethers";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
@@ -34,11 +34,11 @@ function MainPage(){
           const signer = await provider.getSigner();
           const address = await signer.getAddress();
           setAccount(address);
-          let contractAddress = "0xF6e64ffE0E83a798a2532E5aC5b1c4006D6b9863";
+          let contractAddress = "0x0768F877FA5F5d5fe1496fdF3BfA81370D75488F";
    
           const contract = new ethers.Contract(
             contractAddress,
-            Drive.abi,
+            abi.abi,
             signer
           );
           console.log(contract);
@@ -54,11 +54,17 @@ function MainPage(){
       <>
       <div className="w-screen px-4">
           <Navbar account={account} />
-          {!modalOpen && (
+         <div className="m-5 w-screen flex">
+         <div>
+         {!modalOpen && (
         <button className="share" onClick={() => setModalOpen(true)}>
           Share
         </button>
       )}
+      </div>
+      <div>
+       </div>
+         </div>
       {modalOpen && (
         <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
       )}
@@ -67,7 +73,9 @@ function MainPage(){
           provider={provider}
           contract={contract}
         ></FileUpload>
-         <Display  contract={contract} account={account}></Display>
+        <div>
+        <Display  contract={contract} account={account}></Display>
+        </div>
         </div>
       </>
         
