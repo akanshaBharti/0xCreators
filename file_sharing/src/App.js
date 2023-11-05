@@ -42,8 +42,9 @@ function App() {
         await provider.send("eth_requestAccounts", []);
         const signer = await provider.getSigner();
         const address = await signer.getAddress();
-        setAccount(address);
-        let contractAddress = "0x6481321f1fC160321eAC3A47104CE595301CF3e3";
+        let x=setAccount(address);
+        console.log("setAccount",x)
+        let contractAddress = "0xF6e64ffE0E83a798a2532E5aC5b1c4006D6b9863";
  
         const contract = new ethers.Contract(
           contractAddress,
@@ -63,10 +64,10 @@ function App() {
   return (
     <div>
    {loading ? <Loader /> : <Wallet />}
-   {/* <FileUpload account={account}
+    <FileUpload account={account}
           provider={provider}
-          contract={contract}/> */}
-    <Navbar/>
+  contract={contract}/>
+  <Navbar/>
     </div>    
   );
 };
