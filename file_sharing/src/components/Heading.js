@@ -1,6 +1,5 @@
 import React from 'react';
-import './Css/heading.css'; // Assuming you have a CSS file for styling
-
+import './Css/heading.css'; 
 const Heading = () => {
   return (
     <button className="button" data-text="Awesome">

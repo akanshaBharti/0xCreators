@@ -8,10 +8,7 @@ import { useState, useEffect } from "react";
 import Loader from './components/Loader.js';
 import FileUpload from './components/addFile.tsx';
 import Wallet from "./components/Wallet.js"
-// import Wallet from "./components/Wallet";
-// import Loader from "./components/Loader";
-
-
+import Navbar from './components/Navbar.js';
 
 function App() {
   const [account, setAccount] = useState("");
@@ -66,9 +63,10 @@ function App() {
   return (
     <div>
    {loading ? <Loader /> : <Wallet />}
-   <FileUpload account={account}
+   {/* <FileUpload account={account}
           provider={provider}
-          contract={contract}/>
+          contract={contract}/> */}
+    <Navbar/>
     </div>    
   );
 };
