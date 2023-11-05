@@ -23,7 +23,7 @@ const FileUpload = ({ contract, account, provider }) => {
         }
 
         const resFile = await axios({
-          method: "post",
+          method: "post", 
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
           data: formData,
           headers: {

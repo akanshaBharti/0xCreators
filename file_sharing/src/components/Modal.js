@@ -17,7 +17,7 @@ const Modal = ({ setModalOpen, contract }) => {
         let e1 = document.createElement("option");
         e1.textContent = opt;
         e1.value = opt; 
-        select.appendChild(e1);
+        select.appendChild(e1); 
       }
     };
     contract && accessList();
