@@ -9,11 +9,14 @@ import Loader from './components/Loader.js';
 import FileUpload from './components/addFile.tsx';
 import Wallet from "./components/Wallet.js"
 import Navbar from './components/Navbar.js';
+import Display from './components/display.js';
+import Modal from './components/Modal.js';
 
 function App() {
   const [account, setAccount] = useState("");
   const [contract, setContract] = useState(null);
   const [provider, setProvider] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const [loading, setLoading] = useState(true);
 
@@ -62,13 +65,26 @@ function App() {
   }, []);
 
   return (
+    <>
+   {!modalOpen && (
+        <button className="share" onClick={() => setModalOpen(true)}>
+          Share
+        </button>
+      )}
+      {modalOpen && (
+        <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
+      )}
+
     <div>
    {loading ? <Loader /> : <Wallet />}
     <FileUpload account={account}
           provider={provider}
   contract={contract}/>
-  <Navbar/>
+  {/* <Navbar/> */}
+  <Display  contract={contract} account={account}></Display>
+
     </div>    
+    </>
   );
 };
 
