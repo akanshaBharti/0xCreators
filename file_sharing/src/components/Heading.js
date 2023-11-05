@@ -3,7 +3,7 @@ import './Css/heading.css';
 const Heading = () => {
   return (
     <button className="button" data-text="Awesome">
-        <div className='text-center'>
+        <div className=''>
       <span className="actual-text">&nbsp;"DRIVE 3.0"&nbsp;</span>
       <span aria-hidden="true" className="hover-text">&nbsp;"DRIVE&nbsp;3.0"&nbsp;</span>
       </div>

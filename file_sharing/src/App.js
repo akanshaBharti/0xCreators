@@ -1,18 +1,13 @@
-import './App.css';
-import LandingPage from './pages/LandingPage.js';
+  import './App.css';
+  import LandingPage from './pages/LandingPage.js';
 
-function App() {
- 
-  return (
-    <div className='bg-black h-screen'>
-       <LandingPage/> 
+  function App() {
   
-    {/* <FileUpload account={account}
-          provider={provider}
-  contract={contract}/>
-  <Navbar/> */}
-    </div>    
-  );
-};
+    return (
+      <div className='bg-black h-screen'>
+        <LandingPage/> 
+      </div>    
+    );
+  };
 
-export default App;
+  export default App;

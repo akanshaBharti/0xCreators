@@ -13,7 +13,7 @@ function Wallet() {
   return (
     <div className='mt-[500px]'>
       {isConnected ? (
-       <MainPage isConnected={isConnected}/>
+       <MainPage />
       ) : (
         <div className="flex flex-col items-center justify-center h-screen bg-black">
           <div className="pt-28 pb-20">

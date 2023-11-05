@@ -8,17 +8,6 @@ const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState<Uint8Array | null>(null);
   const [fileName, setFileName] = useState<string | null>(null);
 
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [inputValue, setInputValue] = useState("");
-
-  const handleShareClick = () => {
-    setIsDialogOpen(true);
-  };
-
-  const closeDialog = () => {
-    setIsDialogOpen(false);
-  };
-
   const onAddUser = async (event: React.FormEvent) => {
     event.preventDefault();
 
@@ -109,31 +98,9 @@ const FileUpload = ({ contract, account, provider }) => {
           Add File
         </button>
       </form>
-      <div className="flex gap-10 mt-2 ">
-      <button>Display</button>
-        <button onClick={handleShareClick}>Share</button>
-      </div>
-      
       </div>
 
-      {isDialogOpen && (
-        <div className="dialog">
-          <span className="close" onClick={closeDialog}>&times;</span>
-          <h2 className="dialog-title">Enter Address</h2>
-          <input
-            className="border-2 border-zinc-200"
-            type="text"
-            placeholder="Enter address"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-          />
-          {/* Buttons within the dialog */}
-          <div className="flex gap-10 mt-2">
-          <button >Send</button>
-          <button >Cancel</button>
-          </div>
-        </div>
-      )}
+      
     </>
   );
 };
