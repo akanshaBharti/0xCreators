@@ -5,7 +5,7 @@ function App() {
  
   return (
     <div className='bg-black h-screen'>
-      <LandingPage/>
+       <LandingPage/> 
   
     {/* <FileUpload account={account}
           provider={provider}

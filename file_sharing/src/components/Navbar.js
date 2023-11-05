@@ -6,6 +6,7 @@ function Navbar({ isConnected, address }) {
     <div className="flex flex-row">
       <div className="flex">
         <Heading />
+        
       </div>
       <div className="flex">
         <span>
@@ -21,7 +22,7 @@ function Navbar({ isConnected, address }) {
                   "..." +
                   address.slice(address.length - 4, address.length)
                 : "Address Not Found"
-              : "Connect"}
+              : "Connected"}
           </button>
         </span>
       </div>

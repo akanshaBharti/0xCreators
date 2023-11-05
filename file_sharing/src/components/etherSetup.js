@@ -1,8 +1,10 @@
 import React from "react";
-import ConnectWallet from './components/connectWallet';
-import Drive from './contracts/Drive.sol/Drive.json'
+import ConnectWallet from '../components/connectWallet';
+import Drive from '../contracts/Drive.sol/Drive.json'
 import { ethers } from "ethers";
 import { useState, useEffect } from "react";
+import MainPage from "./MainPage";
+import Button from "./Button";
 
 function EtherSetup({address}){
     const [account, setAccount] = useState("");
@@ -44,8 +46,8 @@ function EtherSetup({address}){
       provider && loadProvider();
     }, []);
  return(
-    <div>
-        <Navbar address={address}></Navbar>
+    <div className="text-white mt-[900px]">
+        <MainPage address={address}></MainPage>
 
     </div>
  )  
