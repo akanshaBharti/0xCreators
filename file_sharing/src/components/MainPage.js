@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import FileUpload from "./addFile.tsx";
 import Modal from "./Modal.js";
 import Display from "./display.js";
+import './Css/mainPage.css';
 
 function MainPage(){
 
