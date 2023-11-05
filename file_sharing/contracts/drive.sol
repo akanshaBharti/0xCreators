@@ -2,7 +2,7 @@
 
 pragma solidity >=0.8.2 <0.9.0;
 
-contract Drive {
+contract Drive{
     struct Access{
         address user;
         bool access;
@@ -12,10 +12,10 @@ contract Drive {
     mapping (address=>Access[]) accesslist;
     mapping (address=>mapping(address=>bool)) previousData;
 
-    function saveFile (address _user, string calldata url) external{
+    function addfile (address _user, string calldata url) external{
         value[_user].push(url);
     }
-    function AccessControl (address user) external {
+    function giveAccess (address user) external {
         ownership[msg.sender][user]=true;
         if (previousData[msg.sender][user] == true){
             for (uint i = 0; i<accesslist[msg.sender].length; i++){
@@ -30,7 +30,7 @@ contract Drive {
         }
     
     }
-    function removeAccess (address user) external {
+    function removePermission (address user) external {
         ownership[msg.sender][user]=false;
         for (uint i = 0; i<accesslist[msg.sender].length; i++){
             if(accesslist[msg.sender][i].user==user){
@@ -39,11 +39,11 @@ contract Drive {
         }
  
     }
-    function show(address _user) external view returns(string[] memory){
+    function display(address _user) external view returns(string[] memory){
         require(_user==msg.sender || ownership[_user][msg.sender],"Access Denied");
         return value[_user];
     }
-    function giveAccess()public view returns(Access[] memory){
+    function share()public view returns(Access[] memory){
         return accesslist[msg.sender];
     }
 }
