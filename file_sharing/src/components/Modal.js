@@ -6,7 +6,7 @@ const Modal = ({ setModalOpen, contract }) => {
     await contract.allow(address);
     setModalOpen(false);
   };
-  useEffect(() => {
+  useEffect(() => { 
     const accessList = async () => {
       const addressList = await contract.giveAccess();
       let select = document.querySelector("#selectNumber");
@@ -25,15 +25,22 @@ const Modal = ({ setModalOpen, contract }) => {
   return (
     <>
       <div className="modalBackground">
-        <div className="modalContainer">
-          <div className="title">Share with</div>
-          <div className="body">
+      <div className="body">
             <input
               type="text"
               className="address"
               placeholder="Enter Address"
             ></input>
           </div>
+        <div className="modalContainer">
+          <div className="title">Share with</div>
+          {/* <div className="body">
+            <input
+              type="text"
+              className="address"
+              placeholder="Enter Address"
+            ></input>
+          </div> */}
           <form id="myForm">
             <select id="selectNumber">
               <option className="address">People With Access</option>

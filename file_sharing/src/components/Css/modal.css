@@ -1,15 +1,32 @@
 .modalBackground {
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
-    /* background-color: rgba(0, 0, 0, 0.2); */
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
+    right: 0;
+  }
+
+  .body {
+    /* flex: 50%; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-size: 1.7rem;
+    /* text-align: center; */
+  }
+  
+  .address {
+    display: block;
+    margin: auto;
+    height: 30px;
+    width: 330px;
+    text-align: center;
   }
   
   .modalContainer {
-    width: 500px;
+    width: 440px;
     height: 200px;
     border-radius: 12px;
     background-color: white;
@@ -18,11 +35,15 @@
     flex-direction: column;
     padding: 25px;
   }
-  
-  .modalContainer {
-    display: inline-block;
-    text-align: center;
+
+  .inputModalBox{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
   }
+
+ 
+
   .title {
     display: inline-block;
     text-align: center;
@@ -40,14 +61,6 @@
     cursor: pointer;
   }
   
-  .modalContainer .body {
-    flex: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.7rem;
-    text-align: center;
-  }
   
   .modalContainer .footer {
     flex: 20%;
@@ -58,7 +71,7 @@
   
   .modalContainer .footer button {
     width: 100px;
-    height: 35px;
+    height: 45px;
     margin: 10px;
     border: none;
     background-color: cornflowerblue;
@@ -71,13 +84,7 @@
   #cancelBtn {
     background-color: crimson;
   }
-  .address {
-    display: block;
-    margin: auto;
-    height: 30px;
-    width: 330px;
-    text-align: center;
-  }
+ 
   
   input[type="text"]:focus {
     background-color: lightblue;
@@ -95,3 +102,5 @@
     margin-right: 10px;
     padding-bottom: 10px;
   }
+
+  

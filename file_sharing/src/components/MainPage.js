@@ -1,5 +1,5 @@
 import React from "react";
-import ConnectWallet from '../components/connectWallet';
+// import ConnectWallet from '../components/connectWallet';
 import abi from '../contracts/Drive.json'
 import { ethers } from "ethers";
 import { useState, useEffect } from "react";
@@ -51,7 +51,7 @@ function MainPage(){
       provider && loadProvider();
     }, []);
     return(
-      <>
+      <> 
       <div className="w-screen px-4">
           <Navbar account={account} />
          <div className="m-5 w-screen flex">

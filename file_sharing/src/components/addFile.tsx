@@ -92,10 +92,11 @@ const FileUpload = ({ contract, account, provider }) => {
         <span className="textArea text-white">Image: {fileName}</span>
         <button
           type="submit"
-          className="btn btn-primary btn-lg"
+          // className="btn btn-primary btn-lg"
+          className="addToDriveBtn"
           onClick={onAddUser}
         >
-          Add File
+          Add File to Drive
         </button>
       </form>
       </div>

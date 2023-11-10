@@ -4,7 +4,7 @@ pragma solidity >=0.8.2 <0.9.0;
 
 contract Drive{
     struct Access{
-        address user;
+        address user; 
         bool access;
     }
     mapping (address=>string[]) value;
